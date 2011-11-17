@@ -6,7 +6,7 @@ NetworkDataCsv::NetworkDataCsv(unsigned int inputs, unsigned int outputs, std::s
     // reading file into memory
     vector<string> fileContents;
 
-    ifstream ifs(fileName.c_str());
+    ifstream ifs(fileName.c_str(), ifstream::in);
     string line;
 
     while( getline( ifs, line ) )
@@ -40,7 +40,6 @@ NetworkDataCsv::NetworkDataCsv(unsigned int inputs, unsigned int outputs, std::s
                 printf("NetworkDataCsv error: got mismatch between 'inputs', 'outputs' and the actual data.\n");
             else
                 samples.push_back(s);
-
         } else {
             printf("NetworkDataCsv error: going to read %d columns, but got only %d", inputs+outputs, tokens.size());
         }
