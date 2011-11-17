@@ -14,6 +14,10 @@ set(LIB_SOURCE
     functions/sigmoidfunction.cpp
     functions/tanhfunction.cpp
     functions/thresholdfunction.cpp
+    core/neuron.cpp
+    core/layer.cpp
+    core/network.cpp
+    core/link.cpp
     )
 
 set(LIB_HEADERS 
@@ -29,6 +33,10 @@ set(LIB_HEADERS
     functions/tanhfunction.h
     functions/thresholdfunction.h
     config.h
+    core/neuron.h
+    core/layer.h
+    core/network.h
+    core/link.h
     )
 
 set(TESTS
