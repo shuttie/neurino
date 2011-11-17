@@ -4,12 +4,13 @@
 #include "config.h"
 #include <math.h>
 
-//! Base class for different activation function types
+//! Base class for different activation function types.
 /*!
   If you want to implement a new activation function, remember that
   the function itself must have a derivative.
 
-
+  Also function performance has a very large impact on the whole network
+  perfomance, so keep in mind not to use ineffective math functions like exp() or pow().
   */
 class Function
 {

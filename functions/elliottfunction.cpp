@@ -1,16 +1,16 @@
 #include "elliottfunction.h"
 
-ElliotFunction::ElliotFunction(float steepness)
+ElliottFunction::ElliottFunction(float steepness)
     :Function(steepness)
 {
 }
 
-float ElliotFunction::value(float x)
+float ElliottFunction::value(float x)
 {
-    return (float)(((x*steepness) / 2) / (1 + fabs(x*steepness)) + 0.5);
+    return (float)((0.5f*(x*steepness) ) / (1.0f + fabs(x*steepness)) + 0.5f);
 }
 
-float ElliotFunction::derivative(float x)
+float ElliottFunction::derivative(float x)
 {
-    return steepness/(2*(1+ffabs(x*steepness))*(1+fabs(x*steepness)));
+    return steepness/(2.0f*(1+fabs(x*steepness))*(1.0f+fabs(x*steepness)));
 }
