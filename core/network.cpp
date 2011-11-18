@@ -1,7 +1,6 @@
 #include "network.h"
 
 Network::Network() {
-
 }
 
 void Network::appendLayer(Layer *layer)
@@ -17,15 +16,13 @@ void Network::linkLayers(Layer *from, Layer *to)
 {
     for (unsigned int j=0; j<to->neurons.size(); ++j) {
         for (unsigned int i=0; i<from->neurons.size(); ++i) {
-            linkNeurons(&from->neurons.at(i), &to->neurons.at(j));
+            // linking neurons
+            links.push_back(Link(&from->neurons.at(i), &to->neurons.at(j)));
+            from->linksFrom[&from->neurons.at(i)].push_back(&links.back());
+            to->linksTo[&to->neurons.at(j)].push_back(&links.back());
         }
-        linkNeurons(to->biasNeuron, &to->neurons.at(j));
+        // linking bias
+        links.push_back(Link(&to->biasNeuron, &to->neurons.at(j)));
+        to->linksTo[&to->neurons.at(j)].push_back(&links.back());
     }
-}
-
-void Network::linkNeurons(Neuron *from, Neuron *to)
-{
-    links.push_back(Link(from, to));
-    linksFrom[from].push_back(&links.back());
-    linksTo[to].push_back(&links.back());
 }

@@ -28,6 +28,10 @@ public:
     vector<Neuron> neurons;
     //! Bias neuron.
     Neuron biasNeuron;
+    //! A cache used to store each neuron links.
+    google::dense_hash_map<Neuron*, vector<Link*> > linksFrom;
+    google::dense_hash_map<Neuron*, vector<Link*> > linksTo;
+
     //! Constructor
     /*!
       \param neuronCount layer neuron count. Also there is a hidden bias neuron.
@@ -38,6 +42,8 @@ public:
     ~Layer();
     //! Update layer inputs with custom values.
     void setInputs(vector<float> &inputs);
+    //! Front-propagate neurons in layer.
+    void propagate();
 };
 
 #endif // LAYER_H

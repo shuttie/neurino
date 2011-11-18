@@ -48,7 +48,8 @@ set(LIB_HEADERS
 set(TESTS
     test_networkdata
     test_networkdata_array
-    test_networkdata_csv)
+    test_networkdata_csv
+    test_network_creation)
 
 include_directories( . data functions )
 
