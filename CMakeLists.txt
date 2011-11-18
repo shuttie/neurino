@@ -21,6 +21,10 @@ set(LIB_SOURCE
     core/layers/inputlayer.cpp
     core/layers/outputlayer.cpp
     algos/algo.cpp
+    algos/bpropalgo.cpp
+    errors/error.cpp
+    errors/errorrmse.cpp
+    errors/errormse.cpp
     )
 
 set(LIB_HEADERS 
@@ -43,13 +47,18 @@ set(LIB_HEADERS
     core/layers/inputlayer.h
     core/layers/outputlayer.h
     algos/algo.h
+    algos/bpropalgo.h
+    errors/error.h
+    errors/errorrmse.h
+    errors/errormse.h
     )
 
 set(TESTS
     test_networkdata
     test_networkdata_array
     test_networkdata_csv
-    test_network_creation)
+    test_network_creation
+    test_bprop_xor)
 
 include_directories( . data functions )
 

@@ -26,3 +26,16 @@ void Network::linkLayers(Layer *from, Layer *to)
         to->linksTo[&to->neurons.at(j)].push_back(&links.back());
     }
 }
+
+vector<float> Network::execute(vector<float> &input)
+{
+    vector<float> result;
+    inputLayer->setInputs(input);
+    for (unsigned int i=0; i<layers.size(); ++i) {
+        layers.at(i)->propagate();
+    }
+    for (unsigned int i=0; i<outputLayer->neurons.size(); ++i) {
+        result.push_back(outputLayer->neurons[i].value);
+    }
+    return result;
+}

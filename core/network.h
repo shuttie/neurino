@@ -23,6 +23,7 @@ public:
     Network();
     void appendLayer(Layer* layer);
     void linkLayers(Layer* from, Layer* to);
+    vector<float> execute(vector<float> &input);
 };
 
 #endif // NETWORK_H

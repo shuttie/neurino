@@ -15,9 +15,14 @@ public:
     float value;
     //! Current derivative value for neuron output.
     float derivative;
+    //! Current neuron error.
+    float sigma;
+    //! Current neuron error delta.
+    float delta;
+
     float valuePending;
     float derivePending;
-    float bpSigma;
+    //float bpSigma;
     float rpDelta;
     Neuron();
     Neuron(bool isInput, bool isOutput);
