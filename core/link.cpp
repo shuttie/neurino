@@ -6,6 +6,6 @@ Link::Link(Neuron *from, Neuron *to)
 }
 
 Link::Link(Neuron *from, Neuron *to, float weight)
-    :Link(from,to), weight(weight) {
+    :from(from), to(to), weight(weight) {
 
 }

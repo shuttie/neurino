@@ -15,9 +15,12 @@ set(LIB_SOURCE
     functions/tanhfunction.cpp
     functions/thresholdfunction.cpp
     core/neuron.cpp
-    core/layer.cpp
     core/network.cpp
     core/link.cpp
+    core/layers/layer.cpp
+    core/layers/inputlayer.cpp
+    core/layers/outputlayer.cpp
+    algos/algo.cpp
     )
 
 set(LIB_HEADERS 
@@ -34,9 +37,12 @@ set(LIB_HEADERS
     functions/thresholdfunction.h
     config.h
     core/neuron.h
-    core/layer.h
     core/network.h
     core/link.h
+    core/layers/layer.h
+    core/layers/inputlayer.h
+    core/layers/outputlayer.h
+    algos/algo.h
     )
 
 set(TESTS
