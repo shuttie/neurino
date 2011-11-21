@@ -69,7 +69,7 @@ int main(int argc, char** argv) {
     dump_neurons(layer2);
     dump_neurons(layer3);
 
-    BPropAlgo algo;
+    BPropmAlgo algo;
     ErrorMSE error;
     for (int i=0; i< 100000; ++i) {
         algo.learn(&net, &data);

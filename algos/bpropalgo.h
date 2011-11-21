@@ -6,7 +6,7 @@
 class BPropAlgo: public Algo {
 public:
     float learnRate;
-    BPropAlgo(float learnRate = 0.6f);
+    BPropAlgo(float learnRate = DEFAULT_BPROP_LEARNRATE);
     virtual void learn(Network *net, NetworkData *data);
 protected:
     void calcSigmaOutput(Layer* layer, vector<float> &idealOutput);

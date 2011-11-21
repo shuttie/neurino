@@ -1,0 +1,8 @@
+#ifndef CONFIG_H
+#define CONFIG_H
+
+#define DEFAULT_STEEPNESS 0.5f
+#define DEFAULT_BPROP_LEARNRATE 0.6f
+#define DEFAULT_BPROPM_MOMENTUM 0.1f
+
+#endif // CONFIG_H

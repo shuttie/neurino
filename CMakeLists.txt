@@ -41,7 +41,7 @@ set(LIB_HEADERS
     functions/sigmoidfunction.h
     functions/tanhfunction.h
     functions/thresholdfunction.h
-    config.h
+    neurino-config.h
     core/neuron.h
     core/network.h
     core/link.h

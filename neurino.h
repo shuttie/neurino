@@ -7,6 +7,7 @@
 
 #include "algos/algo.h"
 #include "algos/bpropalgo.h"
+#include "algos/bpropmalgo.h"
 
 #include "core/layers/layer.h"
 #include "core/layers/inputlayer.h"

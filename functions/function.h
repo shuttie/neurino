@@ -1,7 +1,7 @@
 #ifndef FUNCTION_H
 #define FUNCTION_H
 
-#include "config.h"
+#include "neurino-config.h"
 #include <math.h>
 
 //! Base class for different activation function types.
