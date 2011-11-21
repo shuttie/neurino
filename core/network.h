@@ -5,7 +5,7 @@
 #include "layers/layer.h"
 #include "neuron.h"
 #include <vector>
-#include <google/dense_hash_map>
+#include <stdio.h>
 
 using namespace std;
 
@@ -17,7 +17,7 @@ public:
     /*!
       We're using this type of link storing for processor cache optimization.
       */
-    vector<Link> links;
+    vector<Link*> links;
 
     vector<Layer*> layers;
     Network();

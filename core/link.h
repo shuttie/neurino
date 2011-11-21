@@ -3,6 +3,8 @@
 
 #include "neuron.h"
 
+class Neuron;
+
 class Link {
 public:
     Neuron* from;
@@ -10,12 +12,12 @@ public:
     Link(Neuron* from, Neuron *to, float weight);
     Link(Neuron *from, Neuron *to);
     float weight;
-    float rpGradient;
+    /*float rpGradient;
     float rpGradientPrev;
     float rpDelta;
     float rpDeltaPrev;
     float rpDeltaW;
-    float rpDeltaWPrev;
+    float rpDeltaWPrev;*/
 
 };
 

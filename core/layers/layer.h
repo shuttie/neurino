@@ -5,7 +5,6 @@
 #include "core/neuron.h"
 #include "core/link.h"
 #include <vector>
-#include <google/dense_hash_map>
 
 using namespace std;
 
@@ -28,9 +27,6 @@ public:
     vector<Neuron> neurons;
     //! Bias neuron.
     Neuron biasNeuron;
-    //! A cache used to store each neuron links.
-    google::dense_hash_map<Neuron*, vector<Link*> > linksFrom;
-    google::dense_hash_map<Neuron*, vector<Link*> > linksTo;
 
     //! Constructor
     /*!

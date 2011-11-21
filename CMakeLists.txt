@@ -51,6 +51,7 @@ set(LIB_HEADERS
     errors/error.h
     errors/errorrmse.h
     errors/errormse.h
+    neurino.h
     )
 
 set(TESTS
@@ -69,7 +70,7 @@ set_target_properties(neurino_shared PROPERTIES OUTPUT_NAME "neurino")
 foreach (program ${TESTS})
     add_executable(${program} tests/${program}.cpp)
     target_link_libraries(${program} neurino_shared)
-    add_custom_command(TARGET ${program} POST_BUILD COMMAND ${CMAKE_CURRENT_BINARY_DIR}/${program} ${CMAKE_CURRENT_SOURCE_DIR})
+    #add_custom_command(TARGET ${program} POST_BUILD COMMAND ${CMAKE_CURRENT_BINARY_DIR}/${program} ${CMAKE_CURRENT_SOURCE_DIR})
 endforeach(program)
 
 SET(INCLUDE_INSTALL_DIR ${CMAKE_INSTALL_PREFIX}/include/neurino)

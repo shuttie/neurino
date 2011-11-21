@@ -1,6 +1,13 @@
 #ifndef NEURON_H
 #define NEURON_H
 
+#include <vector>
+#include "link.h"
+
+using namespace std;
+
+class Link;
+
 //! Simple neuron class.
 /*!
 
@@ -24,6 +31,9 @@ public:
     float derivePending;
     //float bpSigma;
     float rpDelta;
+
+    vector<Link*> linksFrom;
+    vector<Link*> linksTo;
     Neuron();
     Neuron(bool isInput, bool isOutput);
 };
