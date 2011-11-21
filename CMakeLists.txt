@@ -22,6 +22,8 @@ set(LIB_SOURCE
     core/layers/outputlayer.cpp
     algos/algo.cpp
     algos/bpropalgo.cpp
+    algos/rpropalgo.cpp
+    algos/bpropmalgo.cpp
     errors/error.cpp
     errors/errorrmse.cpp
     errors/errormse.cpp
@@ -48,6 +50,8 @@ set(LIB_HEADERS
     core/layers/outputlayer.h
     algos/algo.h
     algos/bpropalgo.h
+    algos/rpropalgo.h
+    algos/bpropmalgo.h
     errors/error.h
     errors/errorrmse.h
     errors/errormse.h

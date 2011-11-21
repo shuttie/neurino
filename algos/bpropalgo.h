@@ -11,7 +11,7 @@ public:
 protected:
     void calcSigmaOutput(Layer* layer, vector<float> &idealOutput);
     void calcSigmaHidden(Layer* layer);
-    void updateWeights(Layer* layer);
+    virtual void updateWeights(Layer* layer);
 };
 
 #endif
