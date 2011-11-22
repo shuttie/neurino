@@ -22,6 +22,7 @@ set(LIB_SOURCE
     core/layers/outputlayer.cpp
     algos/algo.cpp
     algos/bpropalgo.cpp
+    algos/bpropbatchalgo.cpp
     algos/rpropalgo.cpp
     algos/bpropmalgo.cpp
     errors/error.cpp
@@ -50,6 +51,7 @@ set(LIB_HEADERS
     core/layers/outputlayer.h
     algos/algo.h
     algos/bpropalgo.h
+    algos/bpropbatchalgo.h
     algos/rpropalgo.h
     algos/bpropmalgo.h
     errors/error.h
@@ -63,7 +65,8 @@ set(TESTS
     test_networkdata_array
     test_networkdata_csv
     test_network_creation
-    test_bprop_xor)
+    test_bprop_xor
+    test_rprop_xor)
 
 include_directories( . data functions )
 

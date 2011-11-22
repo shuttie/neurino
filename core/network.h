@@ -6,6 +6,8 @@
 #include "neuron.h"
 #include <vector>
 #include <stdio.h>
+#include <ctime>
+#include <cstdlib>
 
 using namespace std;
 

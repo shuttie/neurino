@@ -9,9 +9,11 @@ public:
     BPropAlgo(float learnRate = DEFAULT_BPROP_LEARNRATE);
     virtual void learn(Network *net, NetworkData *data);
 protected:
-    void calcSigmaOutput(Layer* layer, vector<float> &idealOutput);
-    void calcSigmaHidden(Layer* layer);
-    virtual void updateWeights(Layer* layer);
+    void updateSigmaOutput(Layer* layer, vector<float> &idealOutput);
+    void updateSigmaHidden(Layer* layer);
+    virtual void updateGradients(Layer* layer);
+    virtual void updateWeights(Network* net);
+private:
 };
 
 #endif

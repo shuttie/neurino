@@ -2,6 +2,7 @@
 #define LINK_H
 
 #include "neuron.h"
+#include <cstdlib>
 
 class Neuron;
 
@@ -12,12 +13,12 @@ public:
     Link(Neuron* from, Neuron *to, float weight);
     Link(Neuron *from, Neuron *to);
     float weight;
-    /*float rpGradient;
-    float rpGradientPrev;
-    float rpDelta;
-    float rpDeltaPrev;
-    float rpDeltaW;
-    float rpDeltaWPrev;*/
+    float gradient;
+    float gradientPrev;
+    float delta;
+    float deltaPrev;
+    float deltaW;
+    float deltaWPrev;
 
 };
 

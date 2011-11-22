@@ -5,15 +5,9 @@ BPropmAlgo::BPropmAlgo(float learnRate, float momentum)
 
 }
 
-void BPropmAlgo::updateWeights(Layer *layer)
+void BPropmAlgo::updateWeights(Network* net)
 {
-    for (int j=0; j<layer->neurons.size(); ++j) {
-        Neuron *n = &layer->neurons[j];
-        vector<Link*> *links = &layer->neurons[j].linksTo;
-        for (int i=0; i<links->size(); ++i) {
-            float deltaPrev = n->delta;
-            n->delta = n->sigma * learnRate * links->at(i)->from->value;
-            links->at(i)->weight += n->delta + momentum*deltaPrev;
-        }
+    for (int l=0; l<net->links.size(); ++l) {
+        net->links.at(l)->weight += net->links.at(l)->gradient * learnRate + momentum*net->links.at(l)->gradientPrev;
     }
 }

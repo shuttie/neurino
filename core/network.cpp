@@ -1,6 +1,7 @@
 #include "network.h"
 
 Network::Network() {
+    srand(time(NULL));
 }
 
 void Network::appendLayer(Layer *layer)

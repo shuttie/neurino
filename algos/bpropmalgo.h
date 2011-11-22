@@ -8,7 +8,7 @@ public:
     float momentum;
     BPropmAlgo(float learnRate = DEFAULT_BPROP_LEARNRATE, float momentum = DEFAULT_BPROPM_MOMENTUM);
 protected:
-    virtual void updateWeights(Layer *layer);
+    virtual void updateWeights(Network *net);
 
 };
 
