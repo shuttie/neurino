@@ -4,6 +4,17 @@ Network::Network() {
     srand(time(NULL));
 }
 
+Network::~Network() {
+    for (int l=0; l<layers.size(); ++l) {
+        Layer* layer = layers.at(l);
+        delete layer;
+    }
+    for (int l=0; l<links.size(); ++l) {
+        Link* link = links.at(l);
+        delete link;
+    }
+}
+
 void Network::appendLayer(Layer *layer)
 {
     layers.push_back(layer);

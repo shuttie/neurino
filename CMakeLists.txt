@@ -68,6 +68,22 @@ set(TESTS
     test_bprop_xor
     test_rprop_xor)
 
+set(BENCHMARK
+    benchmark/main.cpp
+    benchmark/bench.cpp
+    benchmark/benchbpropbatchxor.cpp
+    benchmark/benchbpropxor.cpp
+    benchmark/benchrpropxor.cpp
+    benchmark/bench.h
+    benchmark/benchbpropbatchxor.h
+    benchmark/benchbpropxor.h
+    benchmark/benchrpropxor.h
+    benchmark/common.h
+)
+
+add_executable(bench ${BENCHMARK})
+target_link_libraries(bench neurino_shared)
+
 include_directories( . data functions )
 
 add_library(neurino_shared SHARED ${LIB_SOURCE} ${LIB_HEADERS})
@@ -84,5 +100,5 @@ SET(INCLUDE_INSTALL_DIR ${CMAKE_INSTALL_PREFIX}/include/neurino)
 INSTALL(FILES ${LIB_HEADERS} ${PUGIXML_SOURCE} DESTINATION include/neurino)
 INSTALL(TARGETS neurino_shared DESTINATION lib)
 
-set(CMAKE_BUILD_TYPE Debug)
-#set(CMAKE_BUILD_TYPE Release)
+#set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_BUILD_TYPE Release)
