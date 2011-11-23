@@ -14,10 +14,7 @@ public:
               float nuPlus   = DEFAULT_RPROP_NUPLUS);
     virtual void learn(Network *net, NetworkData *data);
 protected:
-    virtual void updateWeights(Layer *layer);
-
-private:
-    void updateAllWeights(Network* net);
+    virtual void updateWeights(Network* net);
 };
 
 #endif

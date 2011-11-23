@@ -26,32 +26,10 @@ void RPropAlgo::learn(Network *net, NetworkData *data)
     }
 
     // updating weights
-    updateAllWeights(net);
+    updateWeights(net);
 }
 
-void RPropAlgo::updateWeights(Layer *layer) {
-    /*for (int n=0; n<layer->neurons.size(); ++n) {
-        for (int i=0; i<layer->neurons[n].linksTo.size(); ++i) {
-            Link *l = layer->neurons[n].linksTo[i];
-            float mult = l->gradient * l->gradientPrev;
-            if (mult > 0) {
-                l->delta = rmin(l->delta * nuPlus, deltaMax);
-                l->deltaW = 1.0f*rsign(l->gradient) * l->delta; //-
-                l->weight += l->deltaW;
-                l->gradientPrev = l->gradient;
-            } else if (mult < 0) {
-                l->delta = rmax(l->delta * nuMinus, deltaMin);
-                l->gradientPrev = 0;
-            } else {
-                l->deltaW = 1.0f*rsign(l->gradient) * l->delta; //-
-                l->weight += l->deltaW;
-                //l->gradientPrev = l->gradient;
-            }
-        }
-    }*/
-}
-
-void RPropAlgo::updateAllWeights(Network *net)
+void RPropAlgo::updateWeights(Network *net)
 {
     for (int i=0; i<net->links.size(); ++i) {
         Link *l = net->links[i];
