@@ -62,9 +62,7 @@ void BPropAlgo::updateGradients(Layer *layer)
         Neuron* neuron = &layer->neurons.at(n);
         vector<Link*> *links = &neuron->linksTo;
         for (int j=0; j<links->size(); ++j) {
-            Link *li = links->at(j);
-            li->gradientPrev = li->gradient;
-            li->gradient = neuron->sigma * li->from->value;
+            links->at(j)->gradient = neuron->sigma * links->at(j)->from->value;
         }
     }
 }
