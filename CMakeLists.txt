@@ -58,6 +58,7 @@ set(LIB_HEADERS
     errors/errorrmse.h
     errors/errormse.h
     neurino.h
+    neurino-math.h
     )
 
 set(TESTS

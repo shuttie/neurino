@@ -3,6 +3,7 @@
 
 #include "data/networkdata.h"
 #include "core/network.h"
+#include "neurino-math.h"
 
 class Algo {
 public:

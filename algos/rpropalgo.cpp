@@ -57,36 +57,18 @@ void RPropAlgo::updateAllWeights(Network *net)
         Link *l = net->links[i];
         float mult = l->gradient * l->gradientPrev;
         if (mult > 0) {
-            l->delta = rmin(l->delta * nuPlus, deltaMax);
-            l->deltaW = rsign(l->gradient) * l->delta; //-
+            l->delta = fast_min(l->delta * nuPlus, deltaMax);
+            l->deltaW = fast_sign(l->gradient) * l->delta; //-
             l->weight += l->deltaW;
             l->gradientPrev = l->gradient;
         } else if (mult < 0) {
-            l->delta = rmax(l->delta * nuMinus, deltaMin);
+            l->delta = fast_max(l->delta * nuMinus, deltaMin);
             //l->weight -= l->deltaW;
             l->gradientPrev = 0;
         } else {
-            l->deltaW = rsign(l->gradient) * l->delta; //-
+            l->deltaW = fast_sign(l->gradient) * l->delta; //-
             l->weight += l->deltaW;
             l->gradientPrev = l->gradient;
         }
     }
 }
-
-float RPropAlgo::rsign(float value)
-{
-    if (value>0)        return 1.0f;
-    else if (value<0)   return -1.0f;
-    else                return 0.0;		// yep, that's zero
-}
-
-float RPropAlgo::rmin(float one, float two)
-{
-    return (one<two) ? one : two;
-}
-
-float RPropAlgo::rmax(float one, float two)
-{
-    return (one>two) ? one : two;
-}
-

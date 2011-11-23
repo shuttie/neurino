@@ -17,9 +17,6 @@ protected:
     virtual void updateWeights(Layer *layer);
 
 private:
-    float rmin(float one, float two);
-    float rmax(float one, float two);
-    float rsign(float value);
     void updateAllWeights(Network* net);
 };
 
