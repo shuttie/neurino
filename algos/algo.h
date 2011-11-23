@@ -1,8 +1,8 @@
 #ifndef ALGO_H
 #define ALGO_H
 
-#include "data/networkdata.h"
-#include "core/network.h"
+#include "networkdata.h"
+#include "network.h"
 #include "neurino-math.h"
 
 //! Basic network learning algorithm class.

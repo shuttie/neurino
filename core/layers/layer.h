@@ -1,9 +1,9 @@
 #ifndef LAYER_H
 #define LAYER_H
 
-#include "functions/function.h"
-#include "core/neuron.h"
-#include "core/link.h"
+#include "function.h"
+#include "neuron.h"
+#include "link.h"
 #include <vector>
 
 using namespace std;

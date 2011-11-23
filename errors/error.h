@@ -1,8 +1,8 @@
 #ifndef ERROR_H
 #define ERROR_H
 
-#include "data/networkdata.h"
-#include "core/network.h"
+#include "networkdata.h"
+#include "network.h"
 
 //! A basic error calclation class.
 /*!

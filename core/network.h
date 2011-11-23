@@ -2,7 +2,7 @@
 #define NETWORK_H
 
 #include "link.h"
-#include "layers/layer.h"
+#include "layer.h"
 #include "neuron.h"
 #include <vector>
 #include <stdio.h>

@@ -1,9 +1,9 @@
 // Test to check Network class usability.
 
-#include "core/network.h"
-#include "core/layers/inputlayer.h"
-#include "core/layers/outputlayer.h"
-#include "functions/elliottfunction.h"
+#include "network.h"
+#include "inputlayer.h"
+#include "outputlayer.h"
+#include "elliottfunction.h"
 #include <stdio.h>
 
 int main(int argc, char** argv) {
