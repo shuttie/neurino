@@ -3,6 +3,11 @@
 
 #include "error.h"
 
+//! Mean-square error.
+/*!
+  Calculates mean-square error though the whole dataset.
+  */
+
 class ErrorMSE : public Error {
 public:
     ErrorMSE();

@@ -29,8 +29,6 @@ public:
 
     float valuePending;
     float derivePending;
-    //float bpSigma;
-    float rpDelta;
 
     vector<Link*> linksFrom;
     vector<Link*> linksTo;

@@ -3,6 +3,11 @@
 
 #include "layer.h"
 
+//! Input layer.
+/*!
+  It's just as Layer, but with inputLayer flag set to true.
+  */
+
 class InputLayer : public Layer {
 public:
     InputLayer(unsigned int neuronCount, Function* activationFunction);

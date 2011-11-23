@@ -4,6 +4,12 @@
 #include "algo.h"
 #include "bpropbatchalgo.h"
 
+//! Classic resilient back-propagation as described in original Riedmiller paper.
+/*!
+  RPROP algorithm. Much faster and precise than BProp and does not require setting
+  appropriate learn rate.
+  */
+
 class RPropAlgo : public BPropBatchAlgo {
 public:
     float deltaMin, deltaMax;

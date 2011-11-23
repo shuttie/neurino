@@ -6,7 +6,7 @@
 
 //! A class for creating NetworkData dataset from STL arrays.
 /*!
-  It perdorms some sanity checks and discards broken data.
+  It performs some sanity checks and discards broken data.
   */
 class NetworkDataArray : public NetworkData
 {

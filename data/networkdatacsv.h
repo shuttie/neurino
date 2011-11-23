@@ -11,10 +11,15 @@
 
 using namespace std;
 
+//! A class for creating NetworkData dataset from CSV files.
+/*!
+  It also performs some sanity checks and discards broken data.
+  */
+
 class NetworkDataCsv : public NetworkData
 {
 public:
-    NetworkDataCsv(unsigned int inputs, unsigned int outputs, std::string fileName);
+    NetworkDataCsv(unsigned int inputs, unsigned int outputs, string fileName, string separator);
 };
 
 #endif // NETWORKDATACSV_H

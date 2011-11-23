@@ -1,6 +1,6 @@
 #include "networkdatacsv.h"
 
-NetworkDataCsv::NetworkDataCsv(unsigned int inputs, unsigned int outputs, std::string fileName)
+NetworkDataCsv::NetworkDataCsv(unsigned int inputs, unsigned int outputs, string fileName, string separator)
     :NetworkData(inputs, outputs)
 {
     // reading file into memory
