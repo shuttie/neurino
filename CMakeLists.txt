@@ -85,7 +85,7 @@ set(BENCHMARK
 add_executable(bench ${BENCHMARK})
 target_link_libraries(bench neurino_shared)
 
-include_directories( . data functions )
+include_directories( . data functions algos benchmark core core/layers errors tests)
 
 add_library(neurino_shared SHARED ${LIB_SOURCE} ${LIB_HEADERS})
 

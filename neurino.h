@@ -5,34 +5,34 @@
   Global include file to for the whole Neurino library.
   */
 
-#include "algos/algo.h"
-#include "algos/bpropalgo.h"
-#include "algos/bpropbatchalgo.h"
-#include "algos/bpropmalgo.h"
-#include "algos/rpropalgo.h"
+#include "algo.h"
+#include "bpropalgo.h"
+#include "bpropbatchalgo.h"
+#include "bpropmalgo.h"
+#include "rpropalgo.h"
 
-#include "core/layers/layer.h"
-#include "core/layers/inputlayer.h"
-#include "core/layers/outputlayer.h"
+#include "layer.h"
+#include "inputlayer.h"
+#include "outputlayer.h"
 
-#include "core/link.h"
-#include "core/network.h"
-#include "core/neuron.h"
+#include "link.h"
+#include "network.h"
+#include "neuron.h"
 
-#include "data/networkdata.h"
-#include "data/networkdataarray.h"
-#include "data/networkdatacsv.h"
-#include "data/sample.h"
+#include "networkdata.h"
+#include "networkdataarray.h"
+#include "networkdatacsv.h"
+#include "sample.h"
 
-#include "errors/errormse.h"
-#include "errors/errorrmse.h"
+#include "errormse.h"
+#include "errorrmse.h"
 
-#include "functions/function.h"
-#include "functions/elliottfunction.h"
-#include "functions/elliottsymmfunction.h"
-#include "functions/linearfunction.h"
-#include "functions/sigmoidfunction.h"
-#include "functions/tanhfunction.h"
-#include "functions/thresholdfunction.h"
+#include "function.h"
+#include "elliottfunction.h"
+#include "elliottsymmfunction.h"
+#include "linearfunction.h"
+#include "sigmoidfunction.h"
+#include "tanhfunction.h"
+#include "thresholdfunction.h"
 
 #endif
