@@ -1,5 +1,5 @@
-#ifndef ERROR_H
-#define ERROR_H
+#ifndef NETWORKERROR_H
+#define NETWORKERROR_H
 
 #include "networkdata.h"
 #include "network.h"

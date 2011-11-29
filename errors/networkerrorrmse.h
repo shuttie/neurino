@@ -1,5 +1,5 @@
-#ifndef ERRORRMSE_H
-#define ERRORRMSE_H
+#ifndef NETWORKERRORRMSE_H
+#define NETWORKERRORRMSE_H
 
 #include "networkerror.h"
 #include "networkerrormse.h"
