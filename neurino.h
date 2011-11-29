@@ -24,8 +24,8 @@
 #include "networkdatacsv.h"
 #include "sample.h"
 
-#include "errormse.h"
-#include "errorrmse.h"
+#include "networkerrormse.h"
+#include "networkerrorrmse.h"
 
 #include "function.h"
 #include "elliottfunction.h"

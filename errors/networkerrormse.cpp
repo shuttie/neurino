@@ -1,10 +1,10 @@
-#include "errormse.h"
+#include "networkerrormse.h"
 
-ErrorMSE::ErrorMSE() {
+NetworkErrorMSE::NetworkErrorMSE() {
 
 }
 
-float ErrorMSE::calculate(Network *net, NetworkData *dataset) {
+float NetworkErrorMSE::calculate(Network *net, NetworkData *dataset) {
     float err = 0;
     for (unsigned int i=0; i<dataset->samples.size(); ++i) {
         net->inputLayer->setInputs(dataset->samples[i].inputs);

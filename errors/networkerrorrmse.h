@@ -1,17 +1,17 @@
 #ifndef ERRORRMSE_H
 #define ERRORRMSE_H
 
-#include "error.h"
-#include "errormse.h"
+#include "networkerror.h"
+#include "networkerrormse.h"
 
 //! Root mean-square error.
 /*!
   Calculates root mean-square error though the whole dataset.
   */
 
-class ErrorRMSE : public ErrorMSE {
+class NetworkErrorRMSE : public NetworkErrorMSE {
 public:
-    ErrorRMSE();
+    NetworkErrorRMSE();
     virtual float calculate(Network *net, NetworkData *dataset);
 };
 

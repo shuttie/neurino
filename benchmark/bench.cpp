@@ -47,7 +47,7 @@ void Bench::bench(int tests)
 
 void Bench::calculateFactors(Network* net, NetworkData* data, Algo* algo)
 {
-    ErrorMSE error;
+    NetworkErrorMSE error;
 
     float err = 1000000;
     bool converged = false;

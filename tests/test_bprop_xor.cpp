@@ -70,7 +70,7 @@ int main(int argc, char** argv) {
     //dump_neurons(layer3);
 
     BPropBatchAlgo algo;
-    ErrorMSE error;
+    NetworkErrorMSE error;
     for (int i=0; i< 100000; ++i) {
         algo.learn(&net, &data);
         if (i % 500 == 0)

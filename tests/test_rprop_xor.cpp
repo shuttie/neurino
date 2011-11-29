@@ -56,7 +56,7 @@ int main(int argc, char** argv) {
     net.linkLayers(layer2, layer3);
 
     RPropAlgo algo;
-    ErrorMSE error;
+    NetworkErrorMSE error;
     dump_links(&net);
     for (int i=1; i< 5000; ++i) {
         algo.learn(&net, &data);

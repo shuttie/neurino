@@ -25,9 +25,9 @@ set(LIB_SOURCE
     algos/bpropbatchalgo.cpp
     algos/rpropalgo.cpp
     algos/bpropmalgo.cpp
-    errors/error.cpp
-    errors/errorrmse.cpp
-    errors/errormse.cpp
+    errors/networkerror.cpp
+    errors/networkerrorrmse.cpp
+    errors/networkerrormse.cpp
     )
 
 set(LIB_HEADERS 
@@ -54,9 +54,9 @@ set(LIB_HEADERS
     algos/bpropbatchalgo.h
     algos/rpropalgo.h
     algos/bpropmalgo.h
-    errors/error.h
-    errors/errorrmse.h
-    errors/errormse.h
+    errors/networkerror.h
+    errors/networkerrorrmse.h
+    errors/networkerrormse.h
     neurino.h
     neurino-math.h
     )

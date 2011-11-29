@@ -9,9 +9,9 @@
   For implementing a custom error calculator, you must inherit this class.
   */
 
-class Error {
+class NetworkError {
 public:
-    Error();
+    NetworkError();
     //! An error function.
     virtual float calculate(Network* net, NetworkData* dataset) = 0;
 };
